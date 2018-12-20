@@ -1,0 +1,15 @@
+body {
+    background-color: #f4f8ff;
+}
+.NameApp {
+    font-family: 'Allura', "Times New Roman", sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #eefbf8;
+    background-color: #131313;
+    border-bottom: 2px #090909;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
