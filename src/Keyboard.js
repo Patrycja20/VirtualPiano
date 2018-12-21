@@ -5,112 +5,112 @@ class Keyboard extends React.Component {
   render() {
     return (
       <ul className="Casing">
-        <li id="1" className="white">
+        <li id="f3" className="white">
           <audio></audio>
         </li>
-        <li id="2" className="black ">
+        <li id="fis3" className="black ">
           <audio></audio>
         </li>
-        <li id="3" className="white l">
+        <li id="g3" className="white l">
           <audio></audio>
         </li>
-        <li id="4" className="black ">
+        <li id="gis3" className="black ">
           <audio></audio>
         </li>
-        <li id="5" className="white l">
+        <li id="a3" className="white l">
           <audio></audio>
         </li>
-        <li id="6" className="black">
+        <li id="ais3" className="black">
           <audio></audio>
         </li>
-        <li id="7" className="white l">
+        <li id="h3" className="white l">
           <audio></audio>
         </li>
-        <li id="8" className="white">
+        <li id="c4" className="white">
           <audio></audio>
         </li>
-        <li id="9" className="black">
+        <li id="cis4" className="black">
           <audio></audio>
         </li>
-        <li id="10" className="white l">
+        <li id="d4" className="white l">
           <audio></audio>
         </li>
-        <li id="11" className="black ">
+        <li id="dis4" className="black ">
           <audio></audio>
         </li>
-        <li id="12" className="white l">
+        <li id="e4" className="white l">
           <audio></audio>
         </li>
-        <li id="13" className="white">
+        <li id="f4" className="white">
           <audio></audio>
         </li>
-        <li id="14" className="black">
+        <li id="fis4" className="black">
           <audio></audio>
         </li>
-        <li id="15" className="white l">
+        <li id="g4" className="white l">
           <audio></audio>
         </li>
-        <li id="16" className="black ">
+        <li id="gis4" className="black ">
           <audio></audio>
         </li>
-        <li id="17" className="white l">
+        <li id="a4" className="white l">
           <audio></audio>
         </li>
-        <li id="18" className="black">
+        <li id="ais4" className="black">
           <audio></audio>
         </li>
-        <li id="19" className="white l">
+        <li id="h4" className="white l">
           <audio></audio>
         </li>
-        <li id="20" className="white ">
+        <li id="c5" className="white ">
           <audio></audio>
         </li>
-        <li id="21" className="black">
+        <li id="cis5" className="black">
           <audio></audio>
         </li>
-        <li id="22" className="white l">
+        <li id="d5" className="white l">
           <audio></audio>
         </li>
-        <li id="23" className="black">
+        <li id="dis5" className="black">
           <audio></audio>
         </li>
-        <li id="24" className="white l">
+        <li id="e5" className="white l">
           <audio></audio>
         </li>
-        <li id="25" className="white">
+        <li id="f5" className="white">
           <audio></audio>
         </li>
-        <li id="26" className="black">
+        <li id="fis5" className="black">
           <audio></audio>
         </li>
-        <li id="27" className="white l">
+        <li id="g5" className="white l">
           <audio></audio>
         </li>
-        <li id="28" className="black">
+        <li id="gis5" className="black">
           <audio></audio>
         </li>
-        <li id="29" className="white l">
+        <li id="a5" className="white l">
           <audio></audio>
         </li>
-        <li id="30" className="black">
+        <li id="ais5" className="black">
           <audio></audio>
         </li>
-        <li id="31" className="white l">
+        <li id="h5" className="white l">
           <audio></audio>
         </li>
-        <li id="32" className="white">
+        <li id="c6" className="white">
           <audio></audio>
         </li>
-        <li id="33" className="black">
+        <li id="cis6" className="black">
           <audio></audio>
         </li>
-        <li id="34" className="white l">
+        <li id="d6" className="white l">
           <audio></audio>
         </li>
-        <li id="35" className="black">
+        <li id="dis6" className="black">
           <audio></audio>
         </li>
-        <li id="36" className="white l">
+        <li id="e6" className="white l">
           <audio></audio>
         </li>
       </ul>
