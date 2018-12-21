@@ -6,7 +6,9 @@ class Keyboard extends React.Component {
     return (
       <ul className="Casing">
         <li id="1" className="white">
-          <audio></audio>
+          <audio controls>
+            <source src="sounds/piano_wav/c4.wav" type="audio/mp3"/>
+          </audio>
         </li>
         <li id="2" className="black ">
           <audio></audio>
