@@ -1,30 +1,28 @@
-export function useTool (name)
-{
-  console.log(name);
-  const audio = new Audio(`sounds/piano_mp3/f3.mp3`);
-  audio.play();
-}
+let mapKeysToNotes = {
+  q: 'f3',
+  w: 'g3',
+  e: 'a3',
+  r: 'h3',
+  t: 'c4',
+  y: 'd4',
+  u: 'e4',
+  i: 'f4',
+  o: 'g4',
+  p: 'a4',
+  '1': 'a',
+};
 
-export const shortcuts = {
+const PIANO_SOUNDS = 'sounds/piano_mp3/';
 
-  toolBrush(event) {
+export const handleKeyDown = event => {
 
-    if (event.key !== 'b') return false;
+  for (let key in mapKeysToNotes) {
+    if (event.key === key) {
+      const sound = mapKeysToNotes[key];
 
-    useTool('brush');
-
-    return true;
-
-  },
-
-  toolSelect(event) {
-
-    if (event.key !== 'm') return false;
-
-    useTool('select');
-
-    return true;
-
-  },
+      const audio = new Audio(`${PIANO_SOUNDS}${sound}.mp3`);
+      audio.play();
+    }
+  }
 
 };

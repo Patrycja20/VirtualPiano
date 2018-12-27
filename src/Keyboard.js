@@ -1,9 +1,7 @@
 import React from 'react';
 import './Keyboard.css';
-import Shortcut from './Shortcut';
-import {useTool} from './shortcuts.js';
 
-const PIANO_SOUNDS = 'sounds/piano_mp3/'
+const PIANO_SOUNDS = 'sounds/piano_mp3/';
 
 class Keyboard extends React.Component {
 
@@ -17,10 +15,8 @@ class Keyboard extends React.Component {
   render() {
     return (
       <ul className="Casing">
-        <Shortcut name='toolBrush'>
-        <li id="f3" className="white" onClick={useTool('f3')} to='brush' onMouseDown={(e) => this.play(e)}>
+        <li id="f3" className="white" onMouseDown={(e) => this.play(e)}>
         </li>
-      </Shortcut>
         <li id="fis3" className="black" onMouseDown={(e) => this.play(e)}>
         </li>
         <li id="g3" className="white l" onMouseDown={(e) => this.play(e)}>
