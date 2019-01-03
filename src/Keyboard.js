@@ -1,14 +1,14 @@
 import React from 'react';
 import './Keyboard.css';
-
-const PIANO_SOUNDS = 'sounds/piano_mp3/'
+import { getFullSoundFolder } from './miniStore';
 
 class Keyboard extends React.Component {
 
   play (event) {
     const sound = event.target.id;
+    let soundFolder = getFullSoundFolder();
 
-    const audio = new Audio(`${PIANO_SOUNDS}${sound}.mp3`);
+    const audio = new Audio(`${soundFolder}${sound}.mp3`);
     audio.play();
   }
 
