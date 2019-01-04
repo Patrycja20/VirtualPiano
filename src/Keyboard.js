@@ -1,8 +1,14 @@
 import React from 'react';
 import './Keyboard.css';
-import { getFullSoundFolder } from './miniStore';
+import { getFullSoundFolder} from './miniStore';
 
 class Keyboard extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      infoSignatures: 'Off',
+    };
+  }
 
   play (event) {
     const sound = event.target.id;
@@ -12,9 +18,19 @@ class Keyboard extends React.Component {
     audio.play();
   }
 
+  changeSignatures = (event) => {
+    console.log(this.state.infoSignatures);
+    if(event.target.value === 1) this.setState({infoSignatures: 'On'});
+    else this.setState({infoSignatures: 'Off'});
+  }
+
   render() {
     return (
       <ul className="Casing">
+        <li className="options">
+          <label>Signatures: {this.state.infoSignatures}</label>
+          <input type="range" className="slider" min="0" max="1" step="1" onChange={this.changeSignatures}/>
+        </li>
         <li id="f3" className="white" onMouseDown={(e) => this.play(e)}>
         </li>
         <li id="fis3" className="black" onMouseDown={(e) => this.play(e)}>
