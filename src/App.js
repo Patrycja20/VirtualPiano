@@ -10,7 +10,7 @@ class App extends React.Component {
         <div className="NameApp">
         Virtual Piano
         </div>
-        <Keyboard/>
+        <Keyboard activeSounds={activeSounds}/>
       </div>
     );
   }

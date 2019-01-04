@@ -49,6 +49,14 @@ ul .white {
     background: linear-gradient(top, #f7f7f7 0%, #eefbf8 100%);
 }
 
+ul .white:active {
+    border-left: 1px solid #c1c1c1;
+    border-bottom: 1px solid #686868;
+    border-radius: 0 0 5px 5px;
+    box-shadow: -1px 0 0 rgba(181, 195, 181, 0.8) inset, 0 0 5px #6f6f6f inset, 0 0 3px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(top, #ebebeb 0%, #dfebe8 100%);
+}
+
 ul .white.active {
     border-left: 1px solid #c1c1c1;
     border-bottom: 1px solid #686868;
@@ -75,6 +83,12 @@ ul .white.active {
 }
 
 .black:active {
+    vertical-align: center;
+    box-shadow: -1px -1px 2px rgba(132, 132, 132, 0.2) inset, 0 -5px 2px 3px rgba(36, 36, 36, 0.6) inset, 0 2px 4px rgba(14, 14, 14, 0.5);
+    background: linear-gradient(top, #898989 0%, #484848 100%);
+}
+
+.black.active {
     vertical-align: center;
     box-shadow: -1px -1px 2px rgba(132, 132, 132, 0.2) inset, 0 -5px 2px 3px rgba(36, 36, 36, 0.6) inset, 0 2px 4px rgba(14, 14, 14, 0.5);
     background: linear-gradient(top, #898989 0%, #484848 100%);
