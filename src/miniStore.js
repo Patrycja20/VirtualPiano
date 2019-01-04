@@ -1,5 +1,42 @@
 export const HARP = 'harp'; // Dzwiek harfy
 export const PIANO = 'piano';
+export const KEYS = ['q',
+'w',
+'e',
+'r',
+'t',
+'y',
+'u',
+'i',
+'o',
+'p',
+'[',
+'z',
+'x',
+'c',
+'v',
+'b',
+'n',
+'m',
+',',
+'.',
+'/',
+  '2',
+'3',
+'4',
+'6',
+'7',
+'9',
+'0',
+'-',
+'s',
+'d',
+'g',
+'h',
+'j',
+'l',
+';',
+  ];
 
 let sound = 'piano';
 let clickedArray = [];
@@ -14,6 +51,10 @@ export function getSoundName() {
 
 export function getFullSoundFolder() {
   return `sounds/${sound}_mp3/`;
+}
+
+export function getKeys() {
+  return KEYS;
 }
 
 export function setPianoSound() {
