@@ -39,13 +39,14 @@ export const KEYS = ['q',
 ];
 
 let sound = 'piano';
+let volume = 1;
 
-export function setSound(newSound) {
-  sound = newSound;
+export function setVolume(newVolume) {
+  volume = newVolume;
 }
 
-export function getSoundName() {
-  return sound;
+export function getVolume() {
+  return volume;
 }
 
 export function getFullSoundFolder() {

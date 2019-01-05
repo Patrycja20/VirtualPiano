@@ -1,7 +1,7 @@
-import { getFullSoundFolder } from './miniStore';
+import { getFullSoundFolder, getVolume } from './miniStore';
 import { addClickedSound, removeClickedSound } from './Keyboard';
 
-let mapKeysToNotes = {
+export let mapKeysToNotes = {
   'q': 'f3',
   'w': 'g3',
   'e': 'a3',
@@ -52,6 +52,7 @@ export const handleKeyDown = event => {
 
       const folder = getFullSoundFolder();
       const audio = new Audio(`${folder}${sound}.mp3`);
+      audio.volume = getVolume();
       audio.play();
 
       addClickedSound(sound);

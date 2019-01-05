@@ -1,10 +1,12 @@
 import React from 'react';
 import './Keyboard.css';
 import {
+
   getFullSoundFolder,
   getKeys,
+  setVolume,
   setPianoSound,
-  setHarpSound,
+  setHarpSound, getVolume,
 } from './miniStore';
 
 export let addClickedSound;
@@ -18,6 +20,7 @@ class Keyboard extends React.Component {
     removeClickedSound = this.removeClickedSound;
 
     this.state = {
+      sound:'piano',
       signatures: false,
       keys: [],
       clickedPianoKeys: [],
@@ -38,6 +41,7 @@ class Keyboard extends React.Component {
     let soundFolder = getFullSoundFolder();
 
     const audio = new Audio(`${soundFolder}${sound}.mp3`);
+    audio.volume = getVolume();
     audio.play();
   };
 
@@ -48,17 +52,19 @@ class Keyboard extends React.Component {
 
   onCheckedPiano = () => {
     setPianoSound();
+    this.setState({sound:'piano'});
   };
 
   onCheckedHarp = () => {
     setHarpSound();
+    this.setState({sound:'harp'});
   };
 
   onSetVolume = (event) => {
     const newVolume = ['On', 'On', 'On', 'On'];
     for (let i = parseInt(event.target.id); i < 4; i++)
       newVolume[i] = 'Off';
-
+    setVolume(parseInt(event.target.id)/4);
     this.setState({volume: newVolume});
   };
 
@@ -120,9 +126,9 @@ class Keyboard extends React.Component {
                  onChange={this.changeSignatures}/>
         </div>
         <div className="radio-group options2">
-          <input id="toggle-on" className="toggle toggle-left" name="toggle" type="radio" checked/>
+          <input id="toggle-on" className="toggle toggle-left" name="toggle" type="radio" checked={this.state.sound=='piano'}/>
           <label htmlFor="toggle-on" className="btn" onClick={this.onCheckedPiano}>Piano</label>
-          <input id="toggle-off" className="toggle toggle-right" name="toggle" type="radio"/>
+          <input id="toggle-off" className="toggle toggle-right" name="toggle" type="radio" checked={this.state.sound=='harp'}/>
           <label htmlFor="toggle-off" className="btn" onClick={this.onCheckedHarp}>Harp</label>
         </div>
         <div className="options3">
