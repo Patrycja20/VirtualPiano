@@ -1,6 +1,6 @@
 import React from 'react';
 import './Keyboard.css';
-import { getFullSoundFolder, getKeys} from './miniStore';
+import { getFullSoundFolder, getKeys, setPianoSound, setHarpSound } from './miniStore';
 
 class Keyboard extends React.Component {
   constructor() {
@@ -12,7 +12,7 @@ class Keyboard extends React.Component {
     };
   }
 
-  play (event) {
+  play(event) {
     const sound = event.target.id;
     let soundFolder = getFullSoundFolder();
 
@@ -21,17 +21,31 @@ class Keyboard extends React.Component {
   }
 
   changeSignatures = (event) => {
-    console.log(this.state.infoSignatures);
-    if(event.target.value === '1') this.setState({signatures: '1', infoSignatures: 'On', keys: getKeys()});
+    if (event.target.value === '1') this.setState({signatures: '1', infoSignatures: 'On', keys: getKeys()});
     else this.setState({signatures: '0', infoSignatures: 'Off', keys: []});
+  }
+
+  onCheckedPiano = () => {
+    setPianoSound();
+  }
+
+  onCheckedHarp = () => {
+    setHarpSound();
   }
 
   render() {
     return (
       <ul className="Casing">
-        <div className="options">
-          <label className={this.state.infoSignatures}>Signatures On</label><br/>
-          <input type="range" className="slider" value={this.state.signatures} min="0" max="1" step="1" onChange={this.changeSignatures}/>
+        <div className="options1">
+          <label className={this.state.infoSignatures}>Signatures</label><br/>
+          <input type="range" className="slider" value={this.state.signatures} min="0" max="1" step="1"
+                 onChange={this.changeSignatures}/>
+        </div>
+        <div className="radio-group options2">
+          <input id="toggle-on" className="toggle toggle-left" name="toggle" type="radio" checked/>
+          <label htmlFor="toggle-on" className="btn" onClick={this.onCheckedPiano}>Piano</label>
+          <input id="toggle-off" className="toggle toggle-right" name="toggle"type="radio"/>
+          <label htmlFor="toggle-off" className="btn" onClick={this.onCheckedHarp}>Harp</label>
         </div>
         <li id="f3" className="white" onMouseDown={(e) => this.play(e)}>
           {this.state.keys[0]}
