@@ -22,6 +22,7 @@ class Keyboard extends React.Component {
       infoSignatures: 'Off',
       keys: [],
       clickedPianoKeys: [],
+      volume: ['On', 'On', 'On', 'On'],
     };
   }
 
@@ -54,6 +55,14 @@ class Keyboard extends React.Component {
     setHarpSound();
   }
 
+  onSetVolume = (event) => {
+    const newVolume = ['On', 'On', 'On', 'On']
+    for (let i = parseInt(event.target.id); i < 4; i++)
+      newVolume[i] = 'Off';
+
+    this.setState({volume: newVolume});
+  }
+
   render() {
     return (
       <ul className="Casing">
@@ -65,9 +74,17 @@ class Keyboard extends React.Component {
         <div className="radio-group options2">
           <input id="toggle-on" className="toggle toggle-left" name="toggle" type="radio" checked/>
           <label htmlFor="toggle-on" className="btn" onClick={this.onCheckedPiano}>Piano</label>
-          <input id="toggle-off" className="toggle toggle-right" name="toggle"type="radio"/>
+          <input id="toggle-off" className="toggle toggle-right" name="toggle" type="radio"/>
           <label htmlFor="toggle-off" className="btn" onClick={this.onCheckedHarp}>Harp</label>
         </div>
+        <div className="options3">
+          <div id='0'className="Name" onMouseDown={(e) => this.onSetVolume(e)}>Volume</div>
+          <div id='1' className={this.state.volume[0]} onMouseDown={(e) => this.onSetVolume(e)}></div>
+          <div id='2' className={this.state.volume[1]} onMouseDown={(e) => this.onSetVolume(e)}></div>
+          <div id='3' className={this.state.volume[2]} onMouseDown={(e) => this.onSetVolume(e)}></div>
+          <div id='4' className={this.state.volume[3]} onMouseDown={(e) => this.onSetVolume(e)}></div>
+        </div>
+        <br/>
         <li id="f3" className="white" onMouseDown={(e) => this.play(e)}>
           {this.state.keys[0]}
         </li>

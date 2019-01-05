@@ -36,11 +36,18 @@ label {
 }
 
 .options2 {
-    width: auto;
+    width: 15em;
     height: 5em;
     font-family: "Aharoni", "Times New Roman", sans-serif;
     text-align: left;
     font-size: 1.5rem;
+    padding: 0 0 1em 1em;
+    float: left;
+}
+
+.options3 {
+    width: auto;
+    height: 6em;
     padding: 0 0 1em 1em;
 }
 
@@ -260,3 +267,36 @@ input[type="radio"].toggle:checked + label {
 input[type="radio"].toggle:after{
      left: 0;
  }
+
+div.Name {
+    width: 4em;
+    height: 1.7em;
+    font-family: "Aharoni", "Times New Roman", sans-serif;
+    font-size: 1.7em;
+    text-align: center;
+    text-shadow:  0 0 0.2em #dfdfdf, 0 0 0.2em #a0a0a0;
+    color: #ffffff;
+    margin: 0.9em 0 1em 1em;
+    float: left;
+    border: 1px solid #222424;
+    background: linear-gradient(top, #484848 0%, #020202 20%);
+}
+
+div.On {
+    width: 3em;
+    height: 1.7em;
+    box-shadow:  0 0 0.2em #74e065, 0 0 0.2em #63c057;
+    background: #c6e0bc;
+    margin: 1.8em 0 3em 1em;
+    float: left;
+}
+
+div.Off {
+    width: 3em;
+    height: 1.7em;
+    border: 1px solid #222424;
+    box-shadow: none;
+    background: #245121;
+    margin: 1.8em 0 3em 1em;
+    float: left;
+}
