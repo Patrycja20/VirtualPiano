@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/VirtualPiano/precache-manifest.bb21b6b6694691bb98fae2fde5c2cd2b.js"
+  "/VirtualPiano/precache-manifest.8167752e897404e99c401f045f7f303a.js"
 );
 
 workbox.clientsClaim();
