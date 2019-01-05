@@ -126,13 +126,13 @@ class Keyboard extends React.Component {
                  onChange={this.changeSignatures}/>
         </div>
         <div className="radio-group options2">
-          <input id="toggle-on" className="toggle toggle-left" name="toggle" type="radio" checked={this.state.sound=='piano'}/>
+          <input id="toggle-on" className="toggle toggle-left" name="toggle" type="radio" checked={this.state.sound==='piano'}/>
           <label htmlFor="toggle-on" className="btn" onClick={this.onCheckedPiano}>Piano</label>
-          <input id="toggle-off" className="toggle toggle-right" name="toggle" type="radio" checked={this.state.sound=='harp'}/>
+          <input id="toggle-off" className="toggle toggle-right" name="toggle" type="radio" checked={this.state.sound==='harp'}/>
           <label htmlFor="toggle-off" className="btn" onClick={this.onCheckedHarp}>Harp</label>
         </div>
         <div className="options3">
-          <div id='0'className="Name" onMouseDown={(e) => this.onSetVolume(e)}>Volume</div>
+          <div id='0'className={this.state.volume[0]==='Off' ? 'Name NameNoActive' : 'Name'} onMouseDown={(e) => this.onSetVolume(e)}>Volume</div>
           <div id='1' className={this.state.volume[0]} onMouseDown={(e) => this.onSetVolume(e)}></div>
           <div id='2' className={this.state.volume[1]} onMouseDown={(e) => this.onSetVolume(e)}></div>
           <div id='3' className={this.state.volume[2]} onMouseDown={(e) => this.onSetVolume(e)}></div>

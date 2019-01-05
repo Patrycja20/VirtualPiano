@@ -41,7 +41,7 @@ label {
     font-family: "Aharoni", "Times New Roman", sans-serif;
     text-align: left;
     font-size: 1.5rem;
-    padding: 0 0 1em 1em;
+    padding: 1em 0 1em 1em;
     float: left;
 }
 
@@ -294,6 +294,11 @@ div.Name {
     float: left;
     border: 1px solid #222424;
     background: linear-gradient(top, #484848 0%, #020202 20%);
+}
+
+div.NameNoActive {
+    text-shadow:  none;
+    color: #a9a9a9;
 }
 
 div.On {
