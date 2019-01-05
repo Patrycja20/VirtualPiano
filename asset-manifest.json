@@ -1,13 +1,13 @@
 {
-  "main.css": "/VirtualPiano/static/css/main.bdd28d22.chunk.css",
-  "main.js": "/VirtualPiano/static/js/main.af7ff307.chunk.js",
-  "main.js.map": "/VirtualPiano/static/js/main.af7ff307.chunk.js.map",
+  "main.css": "/VirtualPiano/static/css/main.38fd20ca.chunk.css",
+  "main.js": "/VirtualPiano/static/js/main.2d788614.chunk.js",
+  "main.js.map": "/VirtualPiano/static/js/main.2d788614.chunk.js.map",
   "static/js/1.f739feb7.chunk.js": "/VirtualPiano/static/js/1.f739feb7.chunk.js",
   "static/js/1.f739feb7.chunk.js.map": "/VirtualPiano/static/js/1.f739feb7.chunk.js.map",
   "runtime~main.js": "/VirtualPiano/static/js/runtime~main.53410849.js",
   "runtime~main.js.map": "/VirtualPiano/static/js/runtime~main.53410849.js.map",
-  "static/css/main.bdd28d22.chunk.css.map": "/VirtualPiano/static/css/main.bdd28d22.chunk.css.map",
+  "static/css/main.38fd20ca.chunk.css.map": "/VirtualPiano/static/css/main.38fd20ca.chunk.css.map",
   "index.html": "/VirtualPiano/index.html",
-  "precache-manifest.36f1091d2428ca59a8138e92ab4fccc8.js": "/VirtualPiano/precache-manifest.36f1091d2428ca59a8138e92ab4fccc8.js",
+  "precache-manifest.24d2a1c195101593260154bfa9ef3b59.js": "/VirtualPiano/precache-manifest.24d2a1c195101593260154bfa9ef3b59.js",
   "service-worker.js": "/VirtualPiano/service-worker.js"
 }

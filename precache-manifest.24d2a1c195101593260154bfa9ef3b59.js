@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/VirtualPiano/static/js/runtime~main.53410849.js"
   },
   {
-    "revision": "af7ff307023c8693b069",
-    "url": "/VirtualPiano/static/js/main.af7ff307.chunk.js"
+    "revision": "2d788614fef86d654fae",
+    "url": "/VirtualPiano/static/js/main.2d788614.chunk.js"
   },
   {
     "revision": "f739feb7d61c48a46bed",
     "url": "/VirtualPiano/static/js/1.f739feb7.chunk.js"
   },
   {
-    "revision": "af7ff307023c8693b069",
-    "url": "/VirtualPiano/static/css/main.bdd28d22.chunk.css"
+    "revision": "2d788614fef86d654fae",
+    "url": "/VirtualPiano/static/css/main.38fd20ca.chunk.css"
   },
   {
-    "revision": "731b886b19e38b97bdc43e2f88e755b9",
+    "revision": "b210acaae8756fdff91930b1b2ad28a5",
     "url": "/VirtualPiano/index.html"
   }
 ];
