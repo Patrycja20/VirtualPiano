@@ -1,16 +1,37 @@
 import React from 'react';
 import './Keyboard.css';
-import { getFullSoundFolder, getKeys, setPianoSound, setHarpSound } from './miniStore';
+import {
+  getFullSoundFolder,
+  getKeys,
+  setPianoSound,
+  setHarpSound,
+} from './miniStore';
+
+export let addClickedSound;
+export let removeClickedSound;
 
 class Keyboard extends React.Component {
   constructor() {
     super();
+
+    addClickedSound = this.addClickedSound;
+    removeClickedSound = this.removeClickedSound;
+
     this.state = {
       signatures: '0',
       infoSignatures: 'Off',
       keys: [],
+      clickedPianoKeys: [],
     };
   }
+
+  addClickedSound = (soundName) => {
+    this.setState({clickedPianoKeys: [...this.state.clickedPianoKeys, soundName]})
+  };
+
+  removeClickedSound = (soundName) => {
+    this.setState({clickedPianoKeys: this.state.clickedPianoKeys.filter(el => el !== soundName)})
+  };
 
   play(event) {
     const sound = event.target.id;

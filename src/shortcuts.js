@@ -1,4 +1,5 @@
 import { getFullSoundFolder } from './miniStore';
+import { addClickedSound, removeClickedSound } from './Keyboard';
 
 let mapKeysToNotes = {
   'q': 'f3',
@@ -44,9 +45,7 @@ let mapKeysToNotes = {
   ';': 'dis6',
 };
 
-
 export const handleKeyDown = event => {
-
   for (let key in mapKeysToNotes) {
     if (event.key === key) {
       const sound = mapKeysToNotes[key];
@@ -54,7 +53,17 @@ export const handleKeyDown = event => {
       const folder = getFullSoundFolder();
       const audio = new Audio(`${folder}${sound}.mp3`);
       audio.play();
+
+      addClickedSound(sound);
     }
   }
+};
 
+export const handleKeyUp = event => {
+  for (let key in mapKeysToNotes) {
+    if (event.key === key) {
+      const sound = mapKeysToNotes[key];
+      removeClickedSound(sound);
+    }
+  }
 };
