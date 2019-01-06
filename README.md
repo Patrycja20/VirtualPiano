@@ -55,7 +55,7 @@ Po załadowaniu aplikacji, w komponencie `App` ładowane są wszystkie dźwięki
 
 Z dostępnych opcji nad klawiaturą pianina, zapisanych w pliku `Keyboard.js`, jest włączenie podglądu skrótów klawiszowych. Po przesunięciu żółtego suwaka w prawo jest wywoływana funkcja `changeSignatures()`. Zmienia ona wartość `signatures` na `true` w `state` komponentu. Zmiana tej wartości przypisuje do pustej tablicy `keys` w `state` skróty klawiszowe. Zmiana wartości suwaka w drugą stronę działa w podobny sposób, lecz wyłącza podgląd.
 
-Kolejną opcją jest przełączanie się użytkownika pomiędzy dźwiękami pianina i harfy. Informacja o aktualnie wybranym dźwięku jest przechowywana w `miniStore.js` w zmiennej `sound`. Do zmiany jej wartości służą dwie funkcje: `setPianoSound()` i `setHarpSound()`. W zależności od wybranego dźwięku jest wywoływana jedna z nich.
+Kolejną opcją jest przełączanie się pomiędzy dźwiękami pianina i harfy. Informacja o aktualnie wybranym dźwięku jest przechowywana w `miniStore.js` w zmiennej `sound`. Do zmiany jej wartości służą dwie funkcje: `setPianoSound()` i `setHarpSound()`. W zależności od wybranego dźwięku jest wywoływana jedna z nich.
 
 Za zmianę poziomu głośności odpowiadają ostatnie górne kontrolki. Dostępne są 4 poziomy głośności: `[0%, 25%, 50%, 100%]`, a aktualny wybrany poziom jest zapisywany w zmiennej `volume` w `state` komponentu `Keyboard` przy użyciu funkcji `onSetVolume()`. Aby wyciszyć dźwięk wystarczy kliknąć na przycisk z napisem `Volume`.
 
