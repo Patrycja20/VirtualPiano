@@ -53,11 +53,11 @@ Odgrywanie dźwięków za pomocą skrótów klawiaturowych wygląda podobnie. Dz
 
 Po załadowaniu aplikacji, w komponencie `App` ładowane są wszystkie dźwięki. Dzięki temu w pamięci przeglądarki są załadowane wszystkie dźwięki, nie ma opóźnień podczas doładowywania ich z serwera.
 
-Z dostępnych opcji nad klawiaturą pianina zapisanych w pliku `Keyboard.js` jest włączenie podglądu skrótów klawiszowych. Po przesunięciu żółtego suwaka w prawo jest wywoływana funkcja `changeSignatures()`. Zmienia ona wartość `signatures` na `true` w `state` komponentu. Zmiana tej wartości przypisuje do pustej tablicy `keys` w `state` skróty klawiszowe. Zmiana wartości suwaka w drugą stronę działa w podobny sposób, lecz wyłącza podgląd.
+Z dostępnych opcji nad klawiaturą pianina, zapisanych w pliku `Keyboard.js`, jest włączenie podglądu skrótów klawiszowych. Po przesunięciu żółtego suwaka w prawo jest wywoływana funkcja `changeSignatures()`. Zmienia ona wartość `signatures` na `true` w `state` komponentu. Zmiana tej wartości przypisuje do pustej tablicy `keys` w `state` skróty klawiszowe. Zmiana wartości suwaka w drugą stronę działa w podobny sposób, lecz wyłącza podgląd.
 
 Kolejną opcją jest przełączanie się użytkownika pomiędzy dźwiękami pianina i harfy. Informacja o aktualnie wybranym dźwięku jest przechowywana w `miniStore.js` w zmiennej `sound`. Do zmiany jej wartości służą dwie funkcje: `setPianoSound()` i `setHarpSound()`. W zależności od wybranego dźwięku jest wywoływana jedna z nich.
 
-Za zmianę poziomu głośności odpowiadają ostatnie górne kontrolki. Dostępne są 4 poziomy głośności: `[0%, 25%, 50%, 100%]`, a aktualny wybrany poziom jest zapisywany w zmiennej `volume` w `state` komponentu `Keyboard` przy użyciu funkcji `onSetVolume`.
+Za zmianę poziomu głośności odpowiadają ostatnie górne kontrolki. Dostępne są 4 poziomy głośności: `[0%, 25%, 50%, 100%]`, a aktualny wybrany poziom jest zapisywany w zmiennej `volume` w `state` komponentu `Keyboard` przy użyciu funkcji `onSetVolume()`. Aby wyciszyć dźwięk wystarczy kliknąć na przycisk z napisem `Volume`.
 
 ## Nazewnictwo dźwięków
 Stosujemy oficjalne nazewnictwo dźwięków (podgląd tutaj: [KLIK](https://www.thoughtco.com/thmb/Tji7ttC5XrbulictSXG45hiJAv4=/1550x250/filters:fill(auto,1)/Scientific-Pitch-Notation_large-56a72cde3df78cf7729306a2.png))
