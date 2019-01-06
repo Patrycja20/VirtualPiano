@@ -46,14 +46,19 @@ Pianino umożliwia zmianę dźwięku - do wyboru mamy pianino i harfę.
 Ostatnia kontrolka zmienia głośność pianina. Dostępne są cztery poziomy głośności. 
 
 
+### Technikalia
+Za odgrywanie dźwięków myszką odpowiada komponent `Keyboard`. Po kliknięciu na dany klawisz, wywoływana jest funkcja `play()`. Wczytuje ona ścieżkę do aktualnie wybranego zestawu dźwięków, sprawdza nazwę wciśnięte klawisza, po czym buduje ścieżkę do właściwego pliku dźwiękowego. Na podstawie tej ścieżki tworzony jest obiekt `Audio`, przypisywana jest mu głośność, a następnie jest on odgrywany.
 
+Odgrywanie dźwięków za pomocą skrótów klawiaturowych wygląda podobnie. Dzieje się to w pliku `shortcuts.js`. Plik zawiera mapę klawiszy do dźwięków. Do całego obiektu `document` został podpięty `event listener` na wciśnięcie klawisza. Gdy wciskamy klawisz, jest wywoływana funkcja `handleKeyDown()`, która sprawdza w mapie klawiszy, czy aktualnie wciśnięty odpowiada konkretnemu dźwiękowi. Jeśli tak - sytuacja wygląda analogicznie jak wyżej - pobierana jest ścieżka do odpowiedniego pliku dźwiękowego, jest on ładowany i odgrywany. 
+
+Po załadowaniu aplikacji, w komponencie `App` ładowane są wszystkie dźwięki. Dzięki temu w pamięci przeglądarki są załadowane wszystkie dźwięki, nie ma opóźnień podczas doładowywania ich z serwera.
 
 ## Nazewnictwo dźwięków
-tosujemy oficjalne nazewnictwo dźwięków (podgląd tutaj: [KLIK](https://www.thoughtco.com/thmb/Tji7ttC5XrbulictSXG45hiJAv4=/1550x250/filters:fill(auto,1)/Scientific-Pitch-Notation_large-56a72cde3df78cf7729306a2.png))
+Stosujemy oficjalne nazewnictwo dźwięków (podgląd tutaj: [KLIK](https://www.thoughtco.com/thmb/Tji7ttC5XrbulictSXG45hiJAv4=/1550x250/filters:fill(auto,1)/Scientific-Pitch-Notation_large-56a72cde3df78cf7729306a2.png))
 
 ![piano image](https://www.thoughtco.com/thmb/Tji7ttC5XrbulictSXG45hiJAv4=/1550x250/filters:fill(auto,1)/Scientific-Pitch-Notation_large-56a72cde3df78cf7729306a2.png)
 
-Stosujemy notację europejską, więc zamiast dźwięku **b** jest dźwięk **h**.
+Używamy notację europejską, więc zamiast dźwięku **b** jest dźwięk **h**.
 
 Klawiatura umożliwia odegranie poniższych dźwięków:
 
