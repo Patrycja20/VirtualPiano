@@ -8,6 +8,7 @@ import {
   setPianoSound,
   setHarpSound, getVolume,
 } from './miniStore';
+import { mapKeysToNotes, mapKeysToPrettyNameNotes } from './shortcuts';
 
 export let addClickedSound;
 export let removeClickedSound;
@@ -141,111 +142,183 @@ class Keyboard extends React.Component {
         <br/>
         <li id="f3" className={this.getClassNameToNote('f3')} onMouseDown={this.play}>
           {this.state.keys[0]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[0]]}</span>
         </li>
         <li id="fis3" className={this.getClassNameToNote('fis3')} onMouseDown={this.play}>
           {this.state.keys[21]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[21]]}</span>
         </li>
         <li id="g3" className={this.getClassNameToNote('g3')} onMouseDown={this.play}>
           {this.state.keys[1]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[1]]}</span>
         </li>
         <li id="gis3" className={this.getClassNameToNote('gis3')} onMouseDown={this.play}>
           {this.state.keys[22]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[22]]}</span>
         </li>
         <li id="a3" className={this.getClassNameToNote('a3')} onMouseDown={this.play}>
           {this.state.keys[2]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[2]]}</span>
         </li>
         <li id="ais3" className={this.getClassNameToNote('ais3')} onMouseDown={this.play}>
           {this.state.keys[23]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[23]]}</span>
         </li>
         <li id="h3" className={this.getClassNameToNote('h3')} onMouseDown={this.play}>
           {this.state.keys[3]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[3]]}</span>
         </li>
         <li id="c4" className={this.getClassNameToNote('c4')} onMouseDown={this.play}>
           {this.state.keys[4]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[4]]}</span>
         </li>
         <li id="cis4" className={this.getClassNameToNote('cis4')} onMouseDown={this.play}>
           {this.state.keys[24]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[24]]}</span>
         </li>
         <li id="d4" className={this.getClassNameToNote('d4')} onMouseDown={this.play}>
           {this.state.keys[5]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[5]]}</span>
         </li>
         <li id="dis4" className={this.getClassNameToNote('dis4')} onMouseDown={this.play}>
           {this.state.keys[25]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[25]]}</span>
         </li>
         <li id="e4" className={this.getClassNameToNote('e4')} onMouseDown={this.play}>
           {this.state.keys[6]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[6]]}</span>
         </li>
         <li id="f4" className={this.getClassNameToNote('f4')} onMouseDown={this.play}>
           {this.state.keys[7]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[7]]}</span>
         </li>
         <li id="fis4" className={this.getClassNameToNote('fis4')} onMouseDown={this.play}>
           {this.state.keys[26]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[26]]}</span>
         </li>
         <li id="g4" className={this.getClassNameToNote('g4')} onMouseDown={this.play}>
           {this.state.keys[8]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[8]]}</span>
         </li>
         <li id="gis4" className={this.getClassNameToNote('gis4')} onMouseDown={this.play}>
           {this.state.keys[27]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[27]]}</span>
         </li>
         <li id="a4" className={this.getClassNameToNote('a4')} onMouseDown={this.play}>
           {this.state.keys[9]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[9]]}</span>
         </li>
         <li id="ais4" className={this.getClassNameToNote('ais4')} onMouseDown={this.play}>
           {this.state.keys[28]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[28]]}</span>
         </li>
         <li id="h4" className={this.getClassNameToNote('h4')} onMouseDown={this.play}>
           {this.state.keys[10]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[10]]}</span>
         </li>
         <li id="c5" className={this.getClassNameToNote('c5')} onMouseDown={this.play}>
           {this.state.keys[11]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[11]]}</span>
         </li>
         <li id="cis5" className={this.getClassNameToNote('cis5')} onMouseDown={this.play}>
           {this.state.keys[29]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[29]]}</span>
         </li>
         <li id="d5" className={this.getClassNameToNote('d5')} onMouseDown={this.play}>
           {this.state.keys[12]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[12]]}</span>
         </li>
         <li id="dis5" className={this.getClassNameToNote('dis5')} onMouseDown={this.play}>
           {this.state.keys[30]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[30]]}</span>
         </li>
         <li id="e5" className={this.getClassNameToNote('e5')} onMouseDown={this.play}>
           {this.state.keys[13]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[13]]}</span>
         </li>
         <li id="f5" className={this.getClassNameToNote('f5')} onMouseDown={this.play}>
           {this.state.keys[14]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[14]]}</span>
         </li>
         <li id="fis5" className={this.getClassNameToNote('fis5')} onMouseDown={this.play}>
           {this.state.keys[31]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[31]]}</span>
         </li>
         <li id="g5" className={this.getClassNameToNote('g5')} onMouseDown={this.play}>
           {this.state.keys[15]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[15]]}</span>
         </li>
         <li id="gis5" className={this.getClassNameToNote('gis5')} onMouseDown={this.play}>
           {this.state.keys[32]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[32]]}</span>
         </li>
         <li id="a5" className={this.getClassNameToNote('a5')} onMouseDown={this.play}>
           {this.state.keys[16]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[16]]}</span>
         </li>
         <li id="ais5" className={this.getClassNameToNote('ais5')} onMouseDown={this.play}>
           {this.state.keys[33]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[33]]}</span>
         </li>
         <li id="h5" className={this.getClassNameToNote('h5')} onMouseDown={this.play}>
           {this.state.keys[17]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[17]]}</span>
         </li>
         <li id="c6" className={this.getClassNameToNote('c6')} onMouseDown={this.play}>
           {this.state.keys[18]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[18]]}</span>
         </li>
         <li id="cis6" className={this.getClassNameToNote('cis6')} onMouseDown={this.play}>
           {this.state.keys[34]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[34]]}</span>
         </li>
         <li id="d6" className={this.getClassNameToNote('d6')} onMouseDown={this.play}>
           {this.state.keys[19]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[19]]}</span>
         </li>
         <li id="dis6" className={this.getClassNameToNote('dis6')} onMouseDown={this.play}>
           {this.state.keys[35]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[35]]}</span>
         </li>
         <li id="e6" className={this.getClassNameToNote('e6')} onMouseDown={this.play}>
           {this.state.keys[20]}
+          <br/>
+          <span className='noteName'>{mapKeysToPrettyNameNotes[this.state.keys[20]]}</span>
         </li>
       </ul>
     );

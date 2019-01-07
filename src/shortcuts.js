@@ -45,6 +45,50 @@ export let mapKeysToNotes = {
   ';': 'dis6',
 };
 
+export let mapKeysToPrettyNameNotes = {
+  'q': 'f',
+  'w': 'g',
+  'e': 'a',
+  'r': 'h',
+  't': 'c4',
+  'y': 'd',
+  'u': 'e',
+  'i': 'f',
+  'o': 'g',
+  'p': 'a',
+  '[': 'h',
+
+  'z': 'c5',
+  'x': 'd',
+  'c': 'e',
+  'v': 'f',
+  'b': 'g',
+  'n': 'a',
+  'm': 'h',
+  ',': 'c6',
+  '.': 'd',
+  '/': 'e',
+
+  '2': 'f#',
+  '3': 'g#',
+  '4': 'a#',
+
+  '6': 'c#',
+  '7': 'd#',
+  '9': 'f#',
+  '0': 'g#',
+  '-': 'a#',
+
+  's': 'c#',
+  'd': 'd#',
+  'g': 'f#',
+  'h': 'g#',
+  'j': 'a#',
+
+  'l': 'c#',
+  ';': 'd#',
+};
+
 export const handleKeyDown = event => {
   for (let key in mapKeysToNotes) {
     if (event.key === key) {

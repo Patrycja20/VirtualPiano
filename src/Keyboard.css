@@ -319,3 +319,14 @@ div.Off {
     margin: 1.8em 0 3em 1em;
     float: left;
 }
+
+.noteName {
+  color: #4a48c1;
+  text-shadow: 0 0 0.2em #5653e0, 0 0 0.2em #4a48c1;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.black .noteName {
+  color: #f5f4f4;
+}
